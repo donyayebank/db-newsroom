@@ -24,14 +24,13 @@ class DBNP_Admin {
     }
 
     public function dashboard() {
-        ?>
-        <div class="wrap">
-            <h1>DB Newsroom</h1>
-            <p><strong>نسخه 0.2.0</strong></p>
-            <hr>
-            <p>هسته افزونه با موفقیت بارگذاری شد.</p>
-        </div>
-        <?php
+
+        $template = DBNP_PATH . 'templates/dashboard.php';
+
+        if ( file_exists( $template ) ) {
+            include $template;
+        }
+
     }
 
 }
